@@ -609,8 +609,9 @@ for filename in os.listdir(folder):
                                 inv_date = parse(splitted[-1]).strftime('%d/%m/%Y')
                                 record['date'] = inv_date
 
-                        if 'a year for electricity' in line:
-                            record['description'] = lines[i+1]
+                        if 'Supply Address' in line:
+                            descr = line.split(':')
+                            record['description'] = descr[-1]
 
                         if 'Charges for Meter' in line:
                             # if 'meter' not in record.keys():
