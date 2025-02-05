@@ -1,4 +1,2 @@
-/raw_invoices_test/*.py
-/ocr_temp/*.pdf
 /rng.py
 .venv
